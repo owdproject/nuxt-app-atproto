@@ -10,12 +10,11 @@ const runtimeConfig = useRuntimeConfig()
 
 <template>
   <div class="owd-atproto-desktop-owner text-center">
-    <a :href="routeAtprotoOS('/desktop')" target="_blank" class="text-2xl mt-4">
+    <a :href="routeAtprotoOS('/desktop')" target="_blank" class="owd-atproto-owner-title text-2xl mt-4">
       <span
         class="font-light"
         v-text="runtimeConfig.public.desktop.atprotoDesktop.name.title"
-      />
-      <span
+      /><span
         class="font-bold"
         v-text="runtimeConfig.public.desktop.atprotoDesktop.name.affix"
       />
@@ -57,6 +56,10 @@ const runtimeConfig = useRuntimeConfig()
   &-desktop-owner {
     a {
       display: inline-flex;
+    }
+
+    .owd-atproto-owner-title {
+      gap: 0.35em;
     }
 
     .owd-atproto-owner-avatar {
