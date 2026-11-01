@@ -1,6 +1,6 @@
 {
   "name": "@owdproject/nuxt-app-atproto",
-  "version": "4.0.0-alpha.3",
+  "version": "4.0.0-alpha.4",
   "license": "MIT",
   "homepage": "https://github.com/atproto-os/app-atproto",
   "author": {
@@ -52,8 +52,8 @@
     "@owdproject/nuxt-theme-paper": "^4.0.0-alpha.3",
     "nuxt": "^4.3.0",
     "typescript": "~5.9.3",
+    "vue-tsc": "^3.2.7",
     "@owdproject/nuxt-module-atproto": "^4.0.0-alpha.3",
-    "@owdproject/nuxt-theme-paper": "^4.0.0-alpha.3",
     "@owdproject/nuxt-app-terminal": "^4.0.0-alpha.3"
   },
   "peerDependencies": {

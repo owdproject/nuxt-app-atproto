@@ -88,35 +88,35 @@ function onSignOut() {
 
       <div class="owd-atproto-login flex-1 text-center">
         <div>
-          <div>
-            <Avatar
-              :label="accountLabel"
-              :image="accountAvatar"
-              size="xlarge"
-              shape="circle"
+          <div class="owd-atproto-avatar">
+            <img
+              v-if="accountAvatar"
+              :src="accountAvatar"
+              alt=""
+              class="owd-atproto-avatar__img"
             >
-              <Skeleton
-                v-if="atprotoAccountStore.state.fetching"
-                width="100%"
-                height="100%"
-                borderRadius="50%"
-              />
-            </Avatar>
+            <span v-else class="owd-atproto-avatar__label" v-text="accountLabel" />
+            <div
+              v-if="atprotoAccountStore.state.fetching"
+              class="owd-atproto-avatar__skeleton"
+            />
           </div>
 
-          <Button
+          <button
             v-if="
               !atprotoAccountStore.isAccountLogged &&
               !atprotoAccountStore.state.fetching
             "
-            size="large"
+            type="button"
+            class="owd-atproto-button"
             v-text="$t('atproto.login.actions.login')"
             @click="onSignIn"
           />
 
-          <Button
+          <button
             v-if="atprotoAccountStore.isAccountLogged"
-            size="large"
+            type="button"
+            class="owd-atproto-button"
             v-text="$t('atproto.login.actions.logout')"
             @click="onSignOut"
           />
@@ -142,13 +142,62 @@ function onSignOut() {
   &-login {
     align-content: center;
 
-    .p-avatar {
+    .owd-atproto-avatar {
+      position: relative;
       width: 120px;
       height: 120px;
-      margin: 0 0 32px 0;
+      margin: 0 auto 32px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(127, 127, 127, 0.15);
       text-transform: uppercase;
       font-size: 32px;
+      font-weight: 600;
+
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      &__skeleton {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: rgba(127, 127, 127, 0.25);
+        animation: owd-atproto-pulse 1.2s ease-in-out infinite;
+      }
     }
+
+    .owd-atproto-button {
+      min-width: 140px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 1px solid currentColor;
+      font: inherit;
+      cursor: pointer;
+      background: transparent;
+      color: inherit;
+      opacity: 0.9;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@keyframes owd-atproto-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
   }
 }
 </style>

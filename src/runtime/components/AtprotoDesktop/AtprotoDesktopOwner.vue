@@ -10,7 +10,7 @@ const runtimeConfig = useRuntimeConfig()
 
 <template>
   <div class="owd-atproto-desktop-owner text-center">
-    <a :href="routeAtprotoOS('/client')" target="_blank" class="text-2xl mt-4">
+    <a :href="routeAtprotoOS('/desktop')" target="_blank" class="text-2xl mt-4">
       <span
         class="font-light"
         v-text="runtimeConfig.public.desktop.atprotoDesktop.name.title"
@@ -35,10 +35,12 @@ const runtimeConfig = useRuntimeConfig()
             "
             target="_blank"
           >
-            <Avatar
-              shape="circle"
-              :image="runtimeConfig.public.desktop.atprotoDesktop.owner.profile?.avatar"
-            />
+            <img
+              v-if="runtimeConfig.public.desktop.atprotoDesktop.owner.profile?.avatar"
+              :src="runtimeConfig.public.desktop.atprotoDesktop.owner.profile.avatar"
+              alt=""
+              class="owd-atproto-owner-avatar"
+            >
           </a>
         </div>
         <div
@@ -57,9 +59,11 @@ const runtimeConfig = useRuntimeConfig()
       display: inline-flex;
     }
 
-    .p-avatar {
+    .owd-atproto-owner-avatar {
       width: 22px;
       height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
     }
   }
 }
