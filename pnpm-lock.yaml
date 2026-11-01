@@ -14,9 +14,6 @@ importers:
       '@owdproject/nuxt':
         specifier: ^4.0.0-alpha.3
         version: 4.0.0-alpha.3(3319779a7ce1561d8527b0c578243926)
-      '@owdproject/nuxt-kit-primevue':
-        specifier: ^4.0.0-alpha.3
-        version: 4.0.0-alpha.3(@babel/parser@7.29.12)(@nuxt/schema@4.6.3)(@owdproject/core@4.0.0-alpha.3)(@owdproject/nuxt@4.0.0-alpha.3(3319779a7ce1561d8527b0c578243926))(confbox@0.2.4)(dotenv@17.4.2)(giget@3.3.1)(jiti@2.7.0)(magic-string@1.4.5)(magicast@0.5.5)(mlly@1.8.2)(oxc-parser@0.141.0)(rolldown@1.2.16)(tailwindcss@3.4.19(yaml@2.9.1))(unplugin@3.7.0(esbuild@0.28.2)(rolldown@1.2.16)(rollup@4.67.2)(vite@8.3.5(esbuild@0.28.2)(jiti@2.7.0)(sass@1.107.1)(terser@5.51.2)(yaml@2.9.1)))(vue@3.5.44(typescript@5.9.3))(yaml@2.9.1)
       '@owdproject/nuxt-kit-tailwind':
         specifier: ^4.0.0-alpha.3
         version: 4.0.0-alpha.3(419561929d0228f23e7f47b22b0618e7)

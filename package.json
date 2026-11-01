@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.3.0",
-    "@owdproject/nuxt-kit-primevue": "^4.0.0-alpha.3",
     "@owdproject/nuxt-kit-tailwind": "^4.0.0-alpha.3",
     "@owdproject/nuxt-module-atproto": "^4.0.0-alpha.3",
     "@owdproject/nuxt": "^4.0.0-alpha.3"
